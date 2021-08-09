@@ -13,13 +13,13 @@ def writerpy(msg):
     file.close()
 
 def get_video_duration(filename):
-  cap = cv2.VideoCapture(filename)
-  if cap.isOpened():
-    rate = cap.get(5)
-    frame_num =cap.get(7)
-    duration = frame_num/rate
-    return duration
-  return -1
+    cap = cv2.VideoCapture(filename)
+    if cap.isOpened():
+        rate = cap.get(5)
+        frame_num =cap.get(7)
+        duration = frame_num/rate
+        return duration
+    return -1
 
 def getallfps(v):
     cap=cv2.VideoCapture(video)
@@ -47,8 +47,8 @@ def use(t,n):
     return "".join(a)
 
 def cn(text):
-    a=use(text, "'")
-    b=use(a, '"')
+    #a=use(text, "'")
+    b=use(text, '"')
     return b
 
 if __name__=="__main__":
@@ -69,8 +69,10 @@ if __name__=="__main__":
             si=get_fps(content.start,content.end,vl,vf)
             #print(si)
             L.append(si)
-            writerpy(" "*4+"scene b"+str(ftp)+" with fade")
+            writerpy(" "*4+"show b"+str(ftp)+" with fade")
             writerpy(" "*4+'"'+cn(texts)+'"')
+            if ftp!=1:
+                writerpy(" "*4+"hide b"+str(ftp-1))
     print(L)
     cliptest.getpic(L,video)
     #for i in range(len(L)):
