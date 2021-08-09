@@ -77,7 +77,7 @@ if __name__=="__main__":
             si=get_fps(content.start,content.end,vl,vf)
             #print(si)
             L.append(si)
-            writerpy(" "*4+"show b"+str(ftp)+" with fade")
+            writerpy(" "*4+"show b"+str(ftp)+" with dissolve")
             writerpy(" "*4+'"'+cn(texts)+'"')
             if ftp!=1:
                 writerpy(" "*4+"hide b"+str(ftp-1))
