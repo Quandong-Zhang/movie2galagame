@@ -1,6 +1,7 @@
 import pysrt
 from cv2 import cv2
 import cliptest
+import os
 #import re
 
 srt = pysrt.open("input.srt")
@@ -11,6 +12,11 @@ def writerpy(msg):
     file.write(str(msg))
     file.write("\n")
     file.close()
+
+def chack_rpy():
+    if os.path.exists("script.rpy"):
+        os.remove("script.script.rpy")
+
 
 def get_video_duration(filename):
     cap = cv2.VideoCapture(filename)
@@ -52,6 +58,7 @@ def cn(text):
     return b
 
 if __name__=="__main__":
+    chack_rpy()
     #prepare start
     writerpy("label start:")
     writerpy(" "*4+"play music bgm")
