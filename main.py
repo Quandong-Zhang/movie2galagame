@@ -15,7 +15,7 @@ def writerpy(msg):
 
 def chack_rpy():
     if os.path.exists("script.rpy"):
-        os.remove("script.script.rpy")
+        os.remove("script.rpy")
 
 
 def get_video_duration(filename):
@@ -55,6 +55,7 @@ def use(t,n):
 def cn(text):
     #a=use(text, "'")
     b=use(text, '"')
+    b=use(b, "\n")
     return b
 
 if __name__=="__main__":
