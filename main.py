@@ -6,6 +6,7 @@ import os
 
 srt = pysrt.open("input.srt")
 video="movie.mp4"
+use_effect=False
 
 def writerpy(msg):
     file = open("script.rpy","a",encoding="utf-8")
@@ -77,7 +78,10 @@ if __name__=="__main__":
             si=get_fps(content.start,content.end,vl,vf)
             #print(si)
             L.append(si)
-            writerpy(" "*4+"show b"+str(ftp)+" with dissolve")
+            if use_effect:
+                writerpy(" "*4+"show b"+str(ftp)+" with dissolve")
+            else:
+                writerpy(" "*4+"show b"+str(ftp))
             writerpy(" "*4+'"'+cn(texts)+'"')
             if ftp!=1:
                 writerpy(" "*4+"hide b"+str(ftp-1))

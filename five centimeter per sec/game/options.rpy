@@ -78,12 +78,12 @@ define config.intra_transition = dissolve
 
 ## 载入游戏后使用的转场。
 
-define config.after_load_transition = None
+define config.after_load_transition = fade
 
 
 ## 在游戏结束之后进入主菜单时使用的转场。
 
-define config.end_game_transition = None
+define config.end_game_transition = fade
 
 
 ## 用于控制在游戏开始标签不存在时转场的变量。作为替代，在显示初始化场景后使用
@@ -112,12 +112,12 @@ define config.window_hide_transition = Dissolve(.2)
 
 ## 控制默认的文字显示速度。默认的 0 是瞬间，而其他数字则是每秒显示出的字符数。
 
-default preferences.text_cps = 30
+default preferences.text_cps = 60
 
 
 ## 默认的自动前进延迟。越大的数字会产生越长的等待，有效范围为 0 - 30。
 
-default preferences.afm_time = 15
+default preferences.afm_time = 20
 
 
 ## 存档目录 ########################################################################
@@ -139,7 +139,7 @@ define config.save_directory = "fivecentimeterpersec-1628252622"
 ##
 ## 在任务栏或 Dock 上显示的图标。
 
-define config.window_icon = "gui/window_icon.png"
+define config.window_icon = "gui/window_icon.jpg"
 
 
 ## 生成配置 ########################################################################
