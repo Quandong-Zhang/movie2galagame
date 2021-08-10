@@ -21,12 +21,14 @@ define gui.show_name = True
 
 ## 游戏版本号。
 
-define config.version = "1.0"
+define config.version = "1.1.0"
 
 
 ## 放置在游戏“关于”屏幕的文本。将文本放在三个引号之间，并在段落之间留一个空行。
 
 define gui.about = _p("""
+powered by movie2galagame
+written by quandong-zhang
 """)
 
 
@@ -110,7 +112,7 @@ define config.window_hide_transition = Dissolve(.2)
 
 ## 控制默认的文字显示速度。默认的 0 是瞬间，而其他数字则是每秒显示出的字符数。
 
-default preferences.text_cps = 0
+default preferences.text_cps = 30
 
 
 ## 默认的自动前进延迟。越大的数字会产生越长的等待，有效范围为 0 - 30。
