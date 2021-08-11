@@ -6,7 +6,7 @@ import os
 
 srt = pysrt.open("input.srt")
 video="movie.mp4"
-use_effect=False
+use_effect=True
 
 def writerpy(msg):
     file = open("script.rpy","a",encoding="utf-8")
