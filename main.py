@@ -1,6 +1,7 @@
 import pysrt
 from cv2 import cv2
 import cliptest
+import audio
 import os
 #import re
 
@@ -61,6 +62,7 @@ def cn(text):
 
 if __name__=="__main__":
     chack_rpy()
+    audio.get_audio(video)
     #prepare start
     writerpy("label start:")
     writerpy(" "*4+"play music bgm")
@@ -75,6 +77,7 @@ if __name__=="__main__":
         texts=content.text_without_tags
         if texts.find("{")==-1:
             ftp+=1
+            audio.cut_audio(ftp, get_f_t(content.start), get_f_t(content.end))
             si=get_fps(content.start,content.end,vl,vf)
             #print(si)
             L.append(si)
