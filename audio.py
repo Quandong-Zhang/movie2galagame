@@ -11,10 +11,14 @@ def get_audio(fname):
     os.system(cmd)
 
 def cut_audio(name,s,e):
-    chack_file("./audio/"+str(name)+".mp3")
-    cmd="ffmpeg.exe -i audio.mp3 -ss "+str(s)+" -t "+str(e)+" ./audio/"+str(name)+".mp3"
+    print(s)
+    print(e)
+    nd=e-s
+    chack_file("./audio/a"+str(name)+".mp3")
+    cmd="ffmpeg.exe -i audio.mp3 -ss "+str(s)+" -t "+str(nd)+" ./audio/a"+str(name)+".mp3"
+    print(cmd)
     os.system(cmd)
 
 if __name__=="__main__":
     #get_audio("movie.mp4")
-    cut_audio(1, 50, 300)
+    cut_audio(1, 71.39, 75.52)

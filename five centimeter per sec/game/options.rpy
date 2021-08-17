@@ -21,28 +21,31 @@ define gui.show_name = True
 
 ## 游戏版本号。
 
-define config.version = "1.1.0"
+define config.version = "2.0.1"
 
 
 ## 放置在游戏“关于”屏幕的文本。将文本放在三个引号之间，并在段落之间留一个空行。
 
 define gui.about = _p("""
 powered by movie2galagame
+
 written by quandong-zhang
+
+GitHub repositories: https://github.com/Quandong-Zhang/movie2galagame
 """)
 
 
 ## 在生成的发布版中，可执行文件和目录所使用的短名称。此处必须是仅 ASCII 字符，并
 ## 且不得包含空格、冒号和分号。
 
-define build.name = "fivecentimeterpersec"
+define build.name = "game"
 
 
 ## 音效和音乐 #######################################################################
 
 ## 这三个变量控制默认显示给用户的混音器。任一设置为 False 将隐藏对应的混音器。
 
-define config.has_sound = True
+define config.has_sound = False
 define config.has_music = True
 define config.has_voice = True
 
@@ -190,4 +193,4 @@ init python:
 
 ## 与 itch.io 工程关联的用户名和工程名，以斜杠分隔。
 
-# define build.itch_project = "renpytom/test-project"
+define build.itch_project = "rerange/five-centimeter-per-second"

@@ -8,6 +8,7 @@ import os
 srt = pysrt.open("input.srt")
 video="movie.mp4"
 use_effect=True
+music=False
 
 def writerpy(msg):
     file = open("script.rpy","a",encoding="utf-8")
@@ -65,7 +66,8 @@ if __name__=="__main__":
     audio.get_audio(video)
     #prepare start
     writerpy("label start:")
-    writerpy(" "*4+"play music bgm")
+    if music:
+        writerpy(" "*4+"play music bgm")
     #end
     ftp=0
     L=[]
@@ -85,6 +87,7 @@ if __name__=="__main__":
                 writerpy(" "*4+"show b"+str(ftp)+" with dissolve")
             else:
                 writerpy(" "*4+"show b"+str(ftp))
+            writerpy(" "*4+"voice '/audio/a"+str(ftp)+".mp3'")
             writerpy(" "*4+'"'+cn(texts)+'"')
             if ftp!=1:
                 writerpy(" "*4+"hide b"+str(ftp-1))
